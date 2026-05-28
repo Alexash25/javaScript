@@ -25,3 +25,20 @@ resetBtn.onclick = function() {
     count = 0;
     countLabel.textContent = count;
 }
+
+// Math methods
+// Math.floor(x)
+// Math.ceil(x)
+// Math.trunc(x)
+// Math.pow(x, y);
+// Math.sqrt(x);
+// Math.log(x);
+// Math.sin(x);
+// Math.cos(x);
+// Math.abs(x);
+// Math.max(x);
+// Math.min(x);
+
+// Random Numbers
+// Math.random();
+// Math.floor(Math.random() * 6) + 1; For whole numbers, exclusive
