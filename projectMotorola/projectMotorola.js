@@ -4,6 +4,7 @@ const forwardBtn = document.getElementById("forwardBtn");
 const backwardBtn = document.getElementById("backwardBtn");
 const stopBtn = document.getElementById("stopBtn");
 
+// create a command to send to the esp32
 function sendCommand(command) {
     console.log("Sending:", command);
     fetch(command);
