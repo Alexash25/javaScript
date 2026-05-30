@@ -19,7 +19,7 @@ function generatePassword(length, includeLowerCase, includeUpperCase, includeNum
     }
 
     if (allowedChars.length === 0) {
-        return `(At least 1 set of characters needs to be selected)`;
+        return "something";
     }
 
     for (let i = 0; i < length; i++) {
