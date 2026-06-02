@@ -234,3 +234,81 @@ console.log(car1.color);
 console.log(car1.drive());
 
 // class = structured way to work with objects
+
+class Product{
+    constructor(name, price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    displayProduct() {
+        console.log(`Product: ${this.name}`);
+        console.log(`Price: $${this.price.toFixed(2)}`);
+    }
+
+    calculateTotal(salesTax) {
+        return this.price + (this.price * salesTax);
+    }
+}
+const salesTax = 0.05;
+
+const product1 = new Product("Shirt", 19.99);
+const product2 = new Product("Pants", 22.50);
+const product3 = new Product("Underwear", 100.00);
+
+product1.displayProduct();
+product2.displayProduct();
+product3.displayProduct();
+const totalCost = product1.calculateTotal(salesTax);
+console.log(`Total price (with tax): $${total.toFixed(2)}`);
+
+// static = keyword that defines properites or methods that belong to a class itself rather than the objects created
+//          from that class (class owns anything static, not the objects)
+
+class MathUtil{
+    static PI = 3.14159;
+
+    static getDiameter(radius) {
+        return radius * 2;
+    }
+
+    static getCircumference(radius) {
+        return 2 * this.PI * radius;
+    }
+
+    static getArea(radius) {
+        return this.PI * radius * radius;
+    }
+}
+
+// You don't need an object to access PI.
+console.log(MathUtil.PI);
+console.log(MathUtil.getDiameter(10));
+console.log(MathUtil.getCircumference(10));
+console.log(MathUtil.getArea(10));
+
+class User {
+    static userCount = 0;
+
+    constructor(username) {
+        this.username = username;
+        User.userCount++;
+    }
+
+    sayHello(){
+        console.log(`Hello, my username is ${this.username}`);
+    }
+}
+
+const user1 = new User("Spongebob");
+const user2 = new User("Patrick");
+
+console.log(user1.username);
+console.log(User.userCount);
+
+class Animal {
+    alive = true;
+    eat() {
+        console.log(`This ${this.name} is eating`);
+    }
+}

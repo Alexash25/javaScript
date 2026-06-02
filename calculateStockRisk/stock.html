@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Risk Calculator</title>
+    <link ref="stylesheet" href="stock.css">
+</head>
+<body>
+    <h1 id="mainHeader">Stock Risk Calculator</h1>
+
+    <div id="stock" class="inputs">
+        <label for="stockName">Enter Stock Name:</label>
+        <input type="text" id="stockInput">
+    </div>
+
+    <div id="price" class="inputs">
+        <label for="enterPrice">Enter Stock Price in Dollars:</label>
+        <input type="text" id="priceInput">
+    </div>
+
+    <div id="risk" class="inputs">
+        <label for="enterRisk">Enter Desired Risk:</label>
+        <input type="text" id="riskInput">
+        <button type="button" id="calculateRisk">submit</button>
+    </div><br>
+
+
+
+    <p1 id="output"></p1>
+    <script src="stock.js"></script>
+</body>
+</html>
