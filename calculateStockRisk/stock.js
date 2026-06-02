@@ -15,8 +15,8 @@ document.getElementById("calculateRisk").onclick = function() {
 
 // functions
 function calculateRisk() {
-    document.getElementById("calculateRisk").onclick = calculateRisk;
+    
 }
 
-
-calculateRisk()
+// when the button is clicked, call the function calculateRisk
+document.getElementById("calculateRisk").onclick = calculateRisk;
