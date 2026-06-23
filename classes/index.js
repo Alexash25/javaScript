@@ -177,9 +177,27 @@ console.log(person.age);
 
 // destructuring = extract values from arrays and objects. [] - array destructuring {} - object destructuring
 
-// Example 1
+// [] = to perform array destructuring
+// {} = to perform object destructuring
 
+// Example 1
+// Swap the value of two variables
 let a = 1;
 let b = 2;
 
 [a,b] = [b,a];
+
+// Example 2
+
+const colors = ["red", "green", "blue", "black", "white"];
+
+[colors[0], colors[4]] = [colors[4], colors[0]];
+
+console.log(colors);
+
+// nested objects = Objects inside of other Objects.
+//                  Allows you to represent more complex data structures
+//                  Child Object is enclosed by a Parent Object
+
+//                  Person{Address{}, ContactInfo{}}
+
