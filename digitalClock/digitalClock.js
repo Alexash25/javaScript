@@ -6,6 +6,10 @@ function updateClock() {
 
     // hours to not be in military time
     let hours = now.getHours();
+    
+    // for AM or PM
+    const meridiem = hours >= 12 ? "PM" : "AM";
+    
     hours = hours % 12 || 12;
     hours = hours.toString().padStart(2, 0)
 
@@ -13,8 +17,6 @@ function updateClock() {
     const min = now.getMinutes().toString().padStart(2, 0);
     const sec = now.getSeconds().toString().padStart(2, 0);
 
-    // for AM or PM
-    const meridiem = hours >= 12 ? "PM" : "AM";
     const timeString = `${hours}:${min}:${sec} ${meridiem}`;
     
 
