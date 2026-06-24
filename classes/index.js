@@ -201,3 +201,73 @@ console.log(colors);
 
 //                  Person{Address{}, ContactInfo{}}
 
+// Data and time objects
+// Date constructor: Date(year, month, day, hour, minute, second, ms) (In military time)
+const date = new Date();
+
+const year = date.getFullYear();
+const month = date.getMonth();
+const day = date.getDate();
+const hour = date.getHours();
+const minutes = date.getMinutes();
+const seconds = date.getSeconds();
+const dayOfWeek = date.getDay();
+
+daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+console.log(year);
+console.log(month + 1);
+console.log(day);
+console.log(hour);
+console.log(minutes);
+console.log(seconds);
+console.log(daysOfWeek[dayOfWeek]);
+
+// closure = A function defined inside another function. Allow for private variables and
+//           state maintenance
+
+function outer() {
+
+    // this variable is considered private
+    let message = "Hello";
+    function inner() {
+        console.log(message);
+    }
+
+    inner();
+}
+
+outer();
+
+// it's like creating a class, but it's a funcition
+function createCounter() {
+
+    let count = 0;
+    function increment() {
+
+        count++;
+        console.log(`Count increased to ${count}`);
+    }
+
+    function getCount() {
+        return count;
+    }
+
+    return {increment, getCount};
+}
+
+const counter = createCounter();
+counter.increment();
+counter.increment();
+
+console.log(`The current count is ${counter.getCount()}`)
+// the count is only incrementable within the function
+// but look at this way. we can increment our cout variable, but it is private
+
+// setTimeout() = function in JavaScript that allows you to schedule execution
+
+function sayHello(){
+    window.alert("Hello");
+}
+
+
