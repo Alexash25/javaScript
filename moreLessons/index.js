@@ -84,4 +84,9 @@ newH1.id ="myH1";
 // Step 3 Append to the DOM
 document.body.append(newH1);
 
-// eventListener = LIsten for specific events to create interactive web pages
+// eventListener = Listen for specific events to create interactive web pages
+//                 is added to html elements: keydown (when a key is down),
+//                 keyup (when a key is up)
+
+// document.addEventListener("keydown", event => {
+// console.log(event); });
